@@ -1,8 +1,8 @@
 // All about strings
 
-let str1 = new String("Toy Story");
-let str2 = String("WALL-e");
-let str3 = "Cars";
+let str1 = new String("Toy Story"); // string object
+let str2 = String("WALL-e"); // converting into a string
+let str3 = "Cars"; // string literal
 
 // Methods
 
