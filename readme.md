@@ -9,5 +9,6 @@ Hence, why I am taking another pass at it, this time the aim is to dive in deepe
 ## Resouces
 
 - UoL - ITP1/ITP2 Modules
-- Roadmap.sh - JavaScript
+- Steve Griffith - JavaScript From The Start Series
 - p5 - Getting Started with P5.js book
+
