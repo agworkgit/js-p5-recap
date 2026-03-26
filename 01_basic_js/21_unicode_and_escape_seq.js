@@ -14,3 +14,13 @@ let emojiJP = '\u3047\u3082\u3058'; // Hiragana - emoji
 
 console.log(yesRU, milkDK, breadNO, tomorrowES, emojiJP); // да, mælk, brød, mañana, ぇもじ
 
+console.log(milkDK.charCodeAt(1)); // 230
+
+let s = String.fromCharCode(0x0434);
+console.log(s); // д
+
+console.log('\''); // escaped quote
+console.log('\\'); // escaped slash
+console.log('\tthis is a tab\nthe rest is on a new line');
+//        this is a tab
+// the rest is on a new line
