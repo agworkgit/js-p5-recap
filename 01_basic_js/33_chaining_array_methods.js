@@ -50,3 +50,5 @@ let rn = people
 console.log("List of replicant names:", rn);
 
 // List of replicant names: [ 'Roy Batty', 'Pris' ]
+
+// pulled on macbook
