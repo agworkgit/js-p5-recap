@@ -4,15 +4,15 @@ let numbers = [23, 45, 66, 16, 456, 56, 77];
 let pivot = 30;
 
 let smallNums = numbers.filter(function (item, index, array) {
-  return item < pivot;
+  return item < pivot; // less than pivot
 });
 
 let bigNums = numbers.filter(function (item, index, array) {
-  return item > pivot;
+  return item > pivot; // greater than pivot
 });
 
 let oddNums = numbers.filter(function (item, index, array) {
-  return item % 2 === 1;
+  return item % 2 === 1; // has remainder after division by 2 = odd number
 });
 
 let log = console.log;
