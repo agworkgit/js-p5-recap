@@ -21,3 +21,12 @@ console.log(r); // -
 
 let p = str2.substr(4, 1);
 console.log(p); // -
+
+let q = str2.slice(4, 5); // startidx, endidx
+console.log(q); // -
+
+let s = str3.indexOf("r"); // index 2
+console.log(s);
+
+let t = str1.lastIndexOf("o"); // index 6 (the last instance of the search)
+console.log(t);
