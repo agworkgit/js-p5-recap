@@ -15,22 +15,20 @@ let dwarves = [
   "Dori",
 ];
 
-// determine the length of each name and save it in an array
+// determine the length of each name and save it in an Array
 
 let nameLengths = dwarves.map(function (item, index, array) {
-  return item + ": " + item.length;
+  return index + " " + item + " " + item.length;
 });
 
 console.log(nameLengths);
-/*
-[
-  'Bifur: 5',  'Bofur: 5',
-  'Bombur: 6', 'Fili: 4',
-  'Kili: 4',   'Oin: 3',
-  'Gloin: 5',  'Thorin: 6',
-  'Balin: 5',  'Dwalin: 6',
-  'Nori: 4',   'Dori: 4'
-]
-*/
 
-// map() returns a new array containing each modified element
+// index + item + length of item
+// [
+//   '0 Bifur 5',  '1 Bofur 5',
+//   '2 Bombur 6', '3 Fili 4',
+//   '4 Kili 4',   '5 Oin 3',
+//   '6 Gloin 5',  '7 Thorin 6',
+//   '8 Balin 5',  '9 Dwalin 6',
+//   '10 Nori 4',  '11 Dori 4'
+// ]
