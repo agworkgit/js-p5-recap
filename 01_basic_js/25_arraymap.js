@@ -18,7 +18,8 @@ let dwarves = [
 // determine the length of each name and save it in an Array
 
 let nameLengths = dwarves.map(function (item, index, array) {
-  return index + " " + item + " " + item.length;
+  let len = item.length;
+  return index + " " + item + " " + len;
 });
 
 console.log(nameLengths);
