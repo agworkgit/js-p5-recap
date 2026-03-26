@@ -25,4 +25,10 @@ let keyword1 = "Star"; // Appears more than once
 let keyword2 = "Cake"; // Appears once
 let keyword3 = "Max"; // Not in list
 
-let test1;
+let test1 = movies.some(function (val, idx) {
+  console.log(idx, val); // checking what some does at each step
+  return val.indexOf(keyword2) > -1;
+});
+
+console.log(test1); // the callback function will run until it encounters he first matching keyword
+// if found, returns true
