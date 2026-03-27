@@ -12,6 +12,7 @@ Hence, why I am taking another pass at it, this time the aim is to dive in deepe
 - Zed - Performance not as good as the Mac version (freezes/crashes on Linux)
 - NeoVim (LazyVim) - Don't have the available time right now to learn vim motions, will look at it again in the near future
 - VSCode - Most reliable so far (however I'm biased as I have been using it for a long time)
+- node-fetch to check JSON in the terminal directly
 
 ## Resouces
 
