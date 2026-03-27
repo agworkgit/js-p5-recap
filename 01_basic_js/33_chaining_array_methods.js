@@ -12,7 +12,7 @@ let people = [
 
 // Two step version
 let replicants = people.filter(function (val, idx) {
-  return val.email.includes("replicant.io");
+  return val.email.includes("replicant.io"); // could have also used indexOf('replicant.io') > -1 instead
 });
 
 let names = people.map(function (val, idx) {
