@@ -9,7 +9,7 @@ let uri = "http://jsonplaceholder.typicode.com/users/7";
 // Old version AJAX (2012-2015)
 
 let xhr = new XMLHttpRequest();
-xhr.open("GET", uri, true);
+xhr.open("GET", uri, true); // true for asyncronous / false for blocking request
 xhr.addEventListener("load", function (response) {
   // handle the response from the server
   let data = response.responseText; // or responseXML
