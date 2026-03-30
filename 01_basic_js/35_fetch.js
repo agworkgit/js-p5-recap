@@ -28,7 +28,8 @@ fetch(uri)
   .then((data) => {
     // data is coming from the return above
     console.log(data);
-    let jsonData = JSON.stringify(data); // if you want a string version of the JS object
+    let jsonData = JSON.stringify(data);
+    // if you want a string version of the JS object
   })
   .catch(function (err) {
     console.log("There was an error:", err.message);
