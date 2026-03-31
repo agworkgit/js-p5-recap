@@ -16,6 +16,7 @@ Hence, why I am taking another pass at it, this time the aim is to dive in deepe
 
 ## Resouces
 
-- UoL - ITP1/ITP2 Modules
 - Steve Griffith - JavaScript From The Start Series
+- JavaScript - The Good Parts book
+- UoL - ITP1/ITP2 Modules
 - p5 - Getting Started with P5.js book
