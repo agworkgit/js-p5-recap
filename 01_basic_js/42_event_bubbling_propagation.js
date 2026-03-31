@@ -16,7 +16,7 @@ d.addEventListener("click", (ev) => {
 // highight clicked element
 let highlight = (ev) => {
   // add CSS class 'gold' to the element that triggered the 'click' event listener
-  ev.stopImmediatePropagation(); // preventing event bubbling
+  ev.stopPropagation(); // preventing event bubbling
   let target = ev.currentTarget;
   target.className = "gold";
   reset(target);
