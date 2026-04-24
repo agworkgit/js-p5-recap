@@ -9,14 +9,12 @@ let log = console.log;
 
 // CONSTRUCTOR PATTERN
 function Car(make, model) {
-  // log(this); (c1/c2 i'm referring to this 'this')
-  // if variables declared here they exist only here, in the object scope!
+  // if variables declared here they exist only here, in the function scope!
   // use 'this' instead
   this.props = {
     make,
     model,
   };
-  // the outside now has access
   this.info = function () {
     return this.props;
   };
