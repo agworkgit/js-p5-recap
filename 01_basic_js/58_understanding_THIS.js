@@ -8,7 +8,7 @@ let log = console.log;
 let myFunc = function () {
   setTimeout(() => {
     console.log("timed log", this);
-  }, 250); // -> again, will point to whatever called myFunc, check the last three calls and the event listener!
+  }, 250); // -> again, will point to whatever called myFunc, check the last three calls and the event listener
   log("1", this); // 'this' is pointing to whoever called it
 };
 
