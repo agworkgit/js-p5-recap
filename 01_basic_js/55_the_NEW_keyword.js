@@ -22,7 +22,7 @@ function Car(make, model) {
   };
 }
 
-// let c1 = Car("Honda", "Accord");
+// let c1 = Car("Honda", "Accord"); -> FACTORY PATTERN (does not use 'this' in the func scope, only inside props)
 // what does 'this' point to? the global context (in the browser)
 let c2 = new Car("Tesla", "Model 3");
 // what does 'this' point to with 'new'? a copy of the 'current' context
