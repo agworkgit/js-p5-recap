@@ -18,5 +18,6 @@ Hence, why I am taking another pass at it, this time the aim is to dive in deepe
 
 - Steve Griffith - JavaScript From The Start (Course)
 - JavaScript - The Good Parts (Book)
+- Eloquent Javascript (Book)
 - UoL - ITP1/ITP2 Modules (Courses)
 - p5 - Getting Started with P5.js (Book)
