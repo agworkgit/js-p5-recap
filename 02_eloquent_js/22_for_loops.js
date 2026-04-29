@@ -28,3 +28,9 @@ for (let number = 0; number <= 12; number = number + 2) {
 Notes:
 - The only change is that all the statements that are related to the 'state' of the loop are now grouped together after 'for'.
 */
+
+let result = 1;
+for (let counter = 0; counter < 10; counter++) {
+  result = result * 2;
+}
+console.log(result); // -> 1024
