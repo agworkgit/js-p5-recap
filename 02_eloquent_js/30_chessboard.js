@@ -15,11 +15,13 @@ Exercise:
 */
 
 let chessboard = "";
-let size = 8;
+let size = 8; // size of (x, y) grid
 
-for (let columns = 0; columns < size; columns++) {
-  for (let rows = 0; rows < size; rows++) {
-    if ((rows + columns) % 2 === 0) {
+// top to botton
+for (let row = 0; row < size; row++) {
+  // left to right
+  for (let col = 0; col < size; col++) {
+    if ((row + col) % 2 === 0) {
       chessboard += " ";
     } else {
       chessboard += "#";
@@ -29,3 +31,14 @@ for (let columns = 0; columns < size; columns++) {
 }
 
 console.log(chessboard);
+
+/* 
+Pos 1 (0, 0) 
+-> is (0 + 0) % 2 === 0? -> 0 === 0? true -> insert ' '
+
+Pos 2 (0, 1)
+-> is (0 + 1) % 2 === 1? -> 1 === 0? false -> insert '#'
+
+Pos 2 (1, 1)
+-> is (1 + 1) % 2 === 0? -> 0 === 0? true -> insert ' '
+*/
