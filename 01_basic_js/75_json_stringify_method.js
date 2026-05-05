@@ -1,7 +1,7 @@
 /*
 Lesser known features when using JSON.stringify() 
 Notes:
--
+- A great way to encode and decode objects if you work with localStorage.
 */
 
 let obj = {
@@ -16,61 +16,84 @@ let obj = {
 let log = console.log;
 let str;
 
-// REGULAR STRINGIFY
+// REGULAR CONVERSION
 
 str = JSON.stringify(obj);
-log("1", str);
+log("1:", str);
 
-/* 
-1 {
-    "name":"Walter",
-    "last":"Sobchak",
-    "age":50,
-    "angry":true,
-    "bestscore":200,
-    "armed":true
-    }
-*/
+/* 1: {
+  "name":"Walter",
+  "last":"Sobchak",
+  "age":50,
+  "angry":true,
+  "bestscore":200,
+  "armed":true
+} */
 
-// ARRAY PARAM
+// FILTER OBJ PROPS WITH ARRAY
 
 str = JSON.stringify(obj, ["age", "angry", "last"]);
-// The array holds keys of the object that we want to allow!
-log("2", str);
+log("2:", str);
 
-/* 
-2 {"age":50,"angry":true,"last":"Sobchak"}
-*/
+/* 2: {
+  "age":50,
+  "angry":true,
+  "last":"Sobchak"
+} */
 
-// FUNCTION PARAM
+// PROCESS PROPS WITH A FUNCTION
 
-function replace(key, val) {
+function replace1(key, val) {
   if (typeof val === "string") {
-    return undefined; // -> setting values to undefined will remove them from the object
+    return "STRING";
   } else {
     return val;
   }
 }
 
-str = JSON.stringify(obj, replace); // 'replace' will be a function
-log("3", str);
+str = JSON.stringify(obj, replace1);
+log("3:", str);
 
-/* 
-3 {"age":50,"angry":true,"bestscore":200,"armed":true}
-*/
+/* 3: {
+  "name":"STRING",
+  "last":"STRING",
+  "age":50,
+  "angry":true,
+  "bestscore":200,
+  "armed":true
+} */
 
-// ADDITIONAL CHARACTERS (LOG PRETTIFIER)
+function replace2(key, val) {
+  // this function runs for every prop in the object
+  // and filters out what we specified in the if...else
+  if (typeof val === "string") {
+    return undefined; // setting to undefined removes the object prop!
+  } else {
+    return val;
+  }
+}
+
+str = JSON.stringify(obj, replace2);
+log("4:", str);
+
+/* 4: {
+  "age":50,
+  "angry":true,
+  "bestscore":200,
+  "armed":true
+} */
+
+// FORMAT OUTPUT
 
 str = JSON.stringify(obj, null, 4);
-log("4", str);
+// spaces = 4, we can also pass a format string e.g. '\t\t\n' etc...
+log("5:", str);
 
-/* 
-4 {
+/* 5: {
     "name": "Walter",
     "last": "Sobchak",
     "age": 50,
     "angry": true,
     "bestscore": 200,
     "armed": true
-}
-*/
+} */
