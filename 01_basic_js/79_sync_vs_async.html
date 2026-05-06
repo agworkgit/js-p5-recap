@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sync VS Async</title>
+</head>
+<body>
+    <h1>Sync VS Async</h1>
+    <script>
+        let log = console.log;
+
+        let a = 5;
+        let b = 50;
+
+        // IIFE (executes the whole thing before moving on)
+        let a1 = (function() { return 5 })(); 
+        let b1 = (function() { return 50 })();
+
+        log(a1) // 5
+        log(b1) // 50
+
+        let a2 = function(num) { return 5 * num }; // 5 from a2 * 50 from b2
+        let b2 = function() { return 50 } // 50
+
+        log(a2(b2())); // a2(50) = 250
+
+        /* 
+        Notes:
+        - Everything up to here is syncronous code.
+        */
+
+        /* 
+        Notes:
+        - Async code = code that breaks out of the normal flow of execution, separates itself to fetch data to be able to execute (non-instantaneous!)
+        - Async : setTimeout, callbacks for geolocation, Promises, fetch, ajax, filesystem interaction, database calls, even DOM event listeners
+        */
+
+        let a3 = 100;
+        setTimeout(function() {
+            a3++
+            log(a3); 
+            // taken aside to exec 1s after first log
+            // the interpreter keeps goin on the main thread!
+        }, 1000);
+        log(a3);
+
+        /* 
+        Promises
+        */
+        
+        let p = new Promise(function(resolve, reject) {
+            // only a container for now...
+            // resolve = function call when receiving a good state
+            // reject = function call when receiving a bad state
+            setTimeout(function (){
+                resolve('Yo!') // value that 'comes' back
+            }, 0)
+        })
+        log(p) // Promise { <state>: "pending" }
+
+        // last executiion to happen!!! (delayed 10ms by setTimeout)
+        setTimeout(function() {
+            log(p); // Promise { <state>: "fulfilled", <value>: "Yo!" }
+        }, 10)
+
+        log(p) // Promise { <state>: "pending" }
+
+        // .then will wait for the Promise to be fullfiled/resolved
+        p.then(function(val) {
+            log(val); // Yo!
+        })
+    </script>
+</body>
+</html>
