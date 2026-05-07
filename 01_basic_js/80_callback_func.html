@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Functions</title>
+    <style>
+        html {
+            /* something */
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>What are 'callback functions'?</h1>
+    <h2>How do they work?</h2>
+    <script>
+        // object
+        const app = {
+            // method
+            geolocation: (good, bad) => { 
+                // geolocation params expecting the names of two functions
+                // do something
+            }
+        }
+
+        let success = (position) => {
+            console.log(`You are 'at' position (${position.latitude}, ${position.longitude})`)
+        } 
+
+        let fail = (err) => {
+            console.warn('Something bad happened', err.message)
+        }
+
+        app.geolocation(success, fail);
+    </script>
+</body>
+</html>
