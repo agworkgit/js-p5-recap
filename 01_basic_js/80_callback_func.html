@@ -22,11 +22,19 @@
             geolocation: (good, bad) => { 
                 // geolocation params expecting the names of two functions
                 // do something
+                try {
+                    navigator.geolocation.getCurrentPosition(good, bad)
+                } catch (err) {
+                    // send err message to fail callback function
+                    bad.call(app.geolocation, err)
+                }
             }
         }
 
         let success = (position) => {
-            console.log(`You are 'at' position (${position.latitude}, ${position.longitude})`)
+            const geoObj = { position }
+            console.log(`You are 'at' position (${geoObj.position.coords.latitude}, ${geoObj.position.coords.longitude})`)
+            // You are 'at' position (33.5670016, -0.1179558)
         } 
 
         let fail = (err) => {
@@ -34,6 +42,8 @@
         }
 
         app.geolocation(success, fail);
+
+        // Notes: The example was using randomised values for the coords, I did it with the geolocation api (realistic scenario)
     </script>
 </body>
 </html>
