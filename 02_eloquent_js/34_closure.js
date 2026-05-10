@@ -45,6 +45,10 @@ function htmlTag(tag) {
   return wrapText;
 }
 
-printH1 = htmlTag("h1");
+let printH1 = htmlTag("h1");
 printH1("Something goes in here...");
+// -> <h1>Something goes in here...</h1>
+
+let printP = htmlTag("p");
+printP("Something else in here...");
 // -> <h1>Something goes in here...</h1>
