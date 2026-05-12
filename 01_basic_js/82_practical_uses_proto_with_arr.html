@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Prototypes to extend arrays</title>
+</head>
+<body>
+    <h1>Using Prototypes to extend objects</h1>
+    <script>
+        let log = console.log;
+
+        let names = [
+            'Sterling',
+            'Pam',
+            'Cyril',
+            'Lana',
+            'Mallory',
+            'Cheryl'
+        ];
+
+        // use the built-in Array.sort() method
+        let sorted = names.sort();
+
+        log(sorted);
+        log(names);
+
+        // create a new array method called shuffle on the Array prototype
+    </script>
+</body>
+</html>
