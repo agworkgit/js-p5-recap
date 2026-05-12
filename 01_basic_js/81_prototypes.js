@@ -70,7 +70,7 @@ Other ways to create objects in JS
 
 // Object.create()
 
-Object.create(proto, propertiesObject);
+// Object.create(proto, propertiesObject);
 
 // Object.assign(target, source1, source2, /* …, */ sourceN)
 
