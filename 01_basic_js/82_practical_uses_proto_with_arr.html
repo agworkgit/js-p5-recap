@@ -26,6 +26,22 @@
         log(names);
 
         // create a new array method called shuffle on the Array prototype
+
+        // Array.abc = function() {} -> not possible!
+        Array.prototype.shuffle = function() {
+            let len = this.length; // this will point to whatever uses the method, not possible with arrow functions (it will change the context)
+            for (let i = 0; i < len; i++) {
+                let temp = "".concat(this[i]);
+                let pos = Math.floor(Math.random() * len);
+                let other = "".concat(this[pos])
+                this[i] = other;
+                this[pos] = temp;
+            }
+            return this;
+        }
+
+        let shuffled = names.shuffle(); // we can now chain shuffle as many times as we want...
+        log(shuffled);
     </script>
 </body>
 </html>
