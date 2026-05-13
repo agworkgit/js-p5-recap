@@ -103,6 +103,8 @@ Practice:
 1. Counting
 2. Tree Structures
 3. Factorials
+4. Fibonnaci
+5. Collatz Conjecture
 */
 
 /* 
@@ -165,13 +167,14 @@ console.log(JSON.stringify(makeTree(categories, null), null, 2));
 
 let factorial = (n) => {
   if (n === 1) return 1;
-  let result = n * factorial(n - 1);
-  return result;
+  return n * factorial(n - 1);
 };
-
 console.log(`Factorial of 7 is:`, factorial(7)); // 5040
 
 // Fibonacci sequences (recursive demonstration)
+
+// (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+// (1, 1, 2, 3, 5, 8, 13, 21, 34, 55)
 
 let fibonacci = (n) => {
   if (n === 1) return 1;
@@ -183,9 +186,24 @@ let fibonacci = (n) => {
     return "Please insert a positive integer";
   }
 };
-
 console.log(
   "What is the 10th digit in the Fibonacci sequence?:",
   fibonacci(10),
 );
 // what is the 10th digit in the sequence? 55
+
+// Collatz conjecture
+
+let collatz = (n) => {
+  // if n is 1 stop
+  if (n === 1) return 0;
+
+  // is n even? no remainder?
+  if (n % 2 === 0) {
+    return 1 + collatz(n / 2);
+  } else {
+    return 1 + collatz(3 * n + 1);
+  }
+};
+
+console.log("Collatz of 7 took:", collatz(7), "steps"); // 16 steps
