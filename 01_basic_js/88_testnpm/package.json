@@ -1,0 +1,12 @@
+{
+  "name": "88_testnpm",
+  "version": "0.3.2",
+  "description": "testing npm",
+  "license": "MIT",
+  "author": "Alex Grigore",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
