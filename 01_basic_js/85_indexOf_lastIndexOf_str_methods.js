@@ -10,14 +10,17 @@ Notes:
 let log = console.log;
 
 let word = "Excalibur";
-let sentence =
-  "In the end, we decided to sell the children and go on vacation.";
+let sentence = "In the end, we decided to sell the children and go on vacation.";
 
-log(sentence.indexOf("end")); // index 7
-log(sentence.lastIndexOf("I")); // index 0
+let whereIsA = word.indexOf('a'); // if we were to search for 'e' we get -1 (or does not exist)
+log(whereIsA); // index 3
 
-log(sentence.toLowerCase().indexOf("i")); // index 0
+// To find the capital E in word
+// We first must convert the string to toLowerCase() before searching for the indexOf
+let lowercaseWord = word.toLowerCase();
+let whereIsE = lowercaseWord.indexOf('e');
+log (whereIsE); // index 0
 
-log(sentence.indexOf("e", 10));
-// '10' is an 'optional start index' argument
-// index 13
+// lastIndexOf does the same thing, but will start searching at the bottom of the string and go backward to find the first result
+let whereIsTheLastE = sentence.lastIndexOf('e');
+log(whereIsTheLastE); // Inside of word 'children' at index 41
