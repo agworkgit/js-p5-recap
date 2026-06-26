@@ -51,6 +51,7 @@
 
         // case sensitive search
         while (p.textContent.indexOf(find) != -1) {
+          // this replaces only first find, hence the while loop to keep searching for all matches
           p.textContent = p.textContent.replace(find, replace);
         }
       }
