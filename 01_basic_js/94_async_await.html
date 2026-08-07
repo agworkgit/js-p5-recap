@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async/Await</title>
+  </head>
+  <body>
+    <header>
+      <h1>JS Async Await Functions</h1>
+    </header>
+    <main>
+      <p id="output">OUTPUT AREA</p>
+    </main>
+
+    <script>
+      // If we place the keyword 'async' in front of this function, we turn it into a Promise
+
+      async function getUser() {
+        let counter = 0;
+        let output = document.getElementById("output");
+        let userId = Math.floor(Math.random() * 10) + 1;
+        let url = `https://jsonplaceholder.typicode.com/users/${userId}`;
+
+        // This is going to take some time, goes over the network, server responds back
+
+        let response = await fetch(url); // async operations need 'await' to signal the operation will take time to resolve!
+        let data = await response.json(); // same here
+
+        // Before 'async' was inserted
+        //   .then((response) => response.json())
+        //   .then((data) => {
+        //     output.textContent += JSON.stringify(data, null, 2);
+        //     console.log(data);
+        //   });
+
+        // Write this out before the fetch goes out
+
+        output.textContent += " REQUEST SENT ";
+        output.textContent += JSON.stringify(data, null, 2);
+        return 42;
+      }
+
+      let ret = getUser();
+      console.log(ret); // prints first before the async operation completes
+    </script>
+  </body>
+</html>
+
+<!-- Async/Await stands for code that might take some time to finish what it's doing. -->
+<!-- Like a 'fetch' request for some resource, file I/O, reading/writing a database, setTimeout, etc... -->
