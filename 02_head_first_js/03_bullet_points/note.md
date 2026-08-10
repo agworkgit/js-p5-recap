@@ -1,0 +1,23 @@
+# Bullet Points
+
+- JavaScript is used to add behaviour to web pages.
+- JavaScript executes fast in modern browsers.
+- Browsers begin executing JavaScript code as soon as they encounter the code in the page.
+- Add JavaScript to your page with the <script> element.
+- You can put your JavaScript inline in the web page, or link to a separate file containing your JavaScript from your HTML.
+- Use the src attribute in the <script> tag to link to a separate JavaScript file.
+- HTML declares the structure and content of the page; JavaScript computes values and adds behaviour to your page.
+- JavaScript programs are mede up of a series of statements.
+- One of the most common JavaScript statements is a variable declaration, which uses the 'let' keyword to declare a new variable and the assignment operator "=" to assign a value to it.
+- Use "const" to assign a value that shouldn't change. (e.g. the value of pi)
+- The value of a constant doesn't vary, so we call them constants, not variables.
+- There are just a few rules and guidelines for naming JavaScript variables and constants, and it's important that you follow them. (e.g. camelCase)
+- Remember to avoid JavaScript keywords when naming variables.
+- JavaScript "expressions" compute values.
+- Three common types of expressions are "numeric", "string", and "boolean" expressions.
+- "if/else" statements allow you to make decisions in your code.
+- "while/for" statments allow you to execute code many times by looping.
+- You can group statements together into a code "block" by enclosing them in curly braces.
+- Use "console.log" instead of "alert" to display messages to the console.
+- Console messages should be used primarily for troubleshooting, as users will most likey never see them.
+- JavaScript is most commonly found adding behaviour to web pages, but it's also used to script many creative applications and is used as a server-side programming language with Node.js
