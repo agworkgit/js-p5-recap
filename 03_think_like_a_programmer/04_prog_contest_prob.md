@@ -39,4 +39,3 @@ The problem is to figure out where the robber and guard meet (intersect), or, ro
 4. Just see where robber is after one second.
 
 My options are not necessarily your options...nor my solution your solution. That's fine.
-
