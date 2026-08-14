@@ -15,8 +15,8 @@ void computeChanges(double &movingX, double &movingY, double speed, double targe
     double ratioY = cos(bigTriangleAngle);
     double changeY = ratioY * speed;
 
-    movingX += __copysignf16(changeX, bigTriangleWidth * -1);
-    movingY += __copysignf16(changeY, bigTriangleHeight * -1);
+    movingX += copysign(changeX, bigTriangleWidth * -1);
+    movingY += copysign(changeY, bigTriangleHeight * -1);
 }
 
 // Distance function for Cartesian coords
@@ -25,7 +25,7 @@ double abs_distance(double object1X, double object1Y, double object2X, double ob
     double diffX = object2X - object1X;
     double diffY = object2Y - object1Y;
     double d = sqrt(diffX * diffX * diffY * diffY);
-    return abs(d);
+    return std::abs(d);
 }
 
 // Speed normalisation

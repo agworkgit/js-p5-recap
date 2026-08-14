@@ -56,8 +56,8 @@ int main()
 
     cout << "Original robberX: " << robberX << " robberY: " << robberY << "\n";
 
-    robberX += __copysignf16(changeX, robberX * -1);
-    robberY += __copysignf16(changeY, robberY * -1);
+    robberX += copysign(changeX, robberX * -1);
+    robberY += copysign(changeY, robberY * -1);
 
     // Output
     // -> New robberX: -8.90527 robberY: 89.0547
@@ -69,8 +69,8 @@ int main()
 
     cout << "Original guardX: " << guardX << " guardY: " << guardY << "\n";
 
-    guardX += __copysignf16(changeX, bigTriangleWidth * -1);
-    guardY += __copysignf16(changeY, bigTriangleHeight * -1);
+    guardX += copysign(changeX, bigTriangleWidth * -1);
+    guardY += copysign(changeY, bigTriangleHeight * -1);
 
     // Output
     // -> New guardX: -6.36426 guardY: 129.086
