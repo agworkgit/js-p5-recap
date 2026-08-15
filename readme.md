@@ -16,9 +16,12 @@ Hence, why I am taking another pass at it, this time the aim is to dive in deepe
 
 ## Resouces
 
-- Steve Griffith - JavaScript From The Start (Course)
 - Head First Javascript Programming (Book)
 - Eloquent Javascript (Book)
+- Modern C++ For Absolute Beginners (Book)
+- The Complete Developer (Book)
+- Think Like a Programmer (Book)
 - JavaScript - The Good Parts (Book)
-- UoL - ITP1/ITP2 Modules (Courses)
 - p5 - Getting Started with P5.js (Book)
+- Steve Griffith - JavaScript From The Start (Course)
+- UoL - ITP1/ITP2 Modules (Courses)

@@ -5,6 +5,9 @@ OPERATORS
 - Arithmetic operators: +, -, *, /, %
 - Compound assignment operators: +=, -=, *=, /=, %=
 - Increment/Decrement: ++var, var++, --var, var--
+    - with pre-increment a value is added first, then the object is evaluated
+    - with post-increment the object is evaluated first and then the value is added
+    - the only difference is the timing in the expression where it's used
 */
 
 #include <iostream>
@@ -67,4 +70,14 @@ int main() {
 
     comp %= 2; // 0
     std::cout << "The value of comp after mod is: " << comp << "\n";
+
+    // INCREMENT / DECREMENT
+    int updt = 123;
+    updt++; // add 1 to the value of x
+    ++updt; // add 1 to the value of x
+    --updt; // decrement the value of x by 1
+    updt--; // decrement the value of x by 1
+
+    std::cout << "The value of updt is: " << updt << "\n";
+    // -> 123
 }
