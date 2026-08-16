@@ -14,9 +14,9 @@ let isSunk = false; // true when ship is sunk
 To do:
 
 - Create loop and get user guess [x]
-- Check user guess []
-- Check if ship has been sunk []
-- Display stats to user []
+- Check user guess [x]
+- Check if ship has been sunk [x]
+- Display stats to user [x]
 */
 
 while (isSunk == false) {
@@ -27,5 +27,25 @@ while (isSunk == false) {
     alert("Please enter a valid cell number!");
   } else {
     guesses = guesses + 1;
+    // checking for hits
+    if (guess == location1 || guess == location2 || guess == location3) {
+      alert("HIT!");
+      hits = hits + 1;
+      // you guessed all 3 locations
+      if (hits == 3) {
+        isSunk = true;
+        alert("You sank my battleship!");
+      }
+    } else {
+      alert("MISS");
+    }
   }
 }
+
+let stats =
+  "You took " +
+  guesses +
+  " guesses to sink the battleship, " +
+  "which means your shooting accuracy was " +
+  3 / guesses;
+alert(stats);
