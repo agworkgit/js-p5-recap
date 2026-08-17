@@ -1,4 +1,4 @@
-/* 
+/*
 POINTERS
 
 - Objects reside in memory, and so far we learned how to access and manipulate objects through variables.
@@ -20,30 +20,30 @@ POINTERS
 
 int main()
 {
-    int* p; // we say that p is of type int*
+    int *p; // we say that p is of type int*
 
     // To declare a pointer that points to a char (object) we declare a pointer of type char*
 
-    char* q;
+    char *q;
 
     // In the first example we declared a pointer of type int*. To make it point to an existing int object in memory, we use the address-of operator &.
     // We say that p points to x.
 
     int x = 123;
-    int* r = &x;
+    int *r = &x;
 
     // In our second example we declared a pointer of type char* and similarly, we have
-    
+
     char c = 'a';
-    char* s = &c;
+    char *s = &c;
 
     // To initialise a pointer that does not point to any object we can use nullptr literal
 
-    char* t = nullptr; // it is said that s is now a null pointer
+    char *t = nullptr; // it is said that s is now a null pointer
 
     // DE-REFERENCING
     char d = 'b';
-    char* u = &d;
+    char *u = &d;
     char e = *u;
 
     std::cout << "The value of the de-referenced pointer is: " << *u;
@@ -54,14 +54,14 @@ int main()
     // Similarly, for an integer pointer we should have
 
     int newX = 123;
-    int* newP = &newX;
+    int *newP = &newX;
     std::cout << "The value of the de-referenced pointer is: " << *newP << "\n";
     // -> The value of the de-referenced pointer is: 123
 
     // We can change the value of the pointed-to object through a de-referenced pointer
 
     int newY = 123;
-    int* newQ = &newY;
+    int *newQ = &newY;
     *newQ = 456; // changed the value of pointed-to object 'newY'
     std::cout << "The value of newY is: " << newY << "\n";
     // -> The value of newY is: 456
