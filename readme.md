@@ -1,4 +1,4 @@
-# Recap of JS/P5
+# Programming Recap
 
 A repo to solidify fundamental to advanced programming concepts in JS, Python, C++ and P5.js.
 
