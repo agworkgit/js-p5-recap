@@ -5,6 +5,8 @@
 
 unordered_list = [8, 12, 6, 9, 4, 10, 3, 11]
 
+print(unordered_list)
+
 # Practice implementation
 
 def practice_algo(list):
@@ -21,22 +23,23 @@ def practice_algo(list):
     return smaller + [pivot] + greater
 
 
-print(practice_algo(unordered_list))
+# print(practice_algo(unordered_list))
 
 # The correct implementation (in-place with i and j)
+# Beware that starting index is 0, in the pseudocode it's 1-indexed
 
 def partition_algo(list):
+    pivot = list[0]
     i = 1
     j = len(list) - 1
-    pivot = list[0]
 
     while i < j:
         # while list[i](12) <= list[0](8) && i(1) < j(7)
-        while list[i] <= pivot and i < j:
+        while list[i] <= pivot:
             # i is now 2
             i += 1
         # while list[j](3) <= list[0](8) && i(1) < j(7)
-        while list[j] >= pivot and i < j:
+        while list[j] >= pivot:
             # j is now 6
             j -= 1
         if i < j:
@@ -46,7 +49,10 @@ def partition_algo(list):
             list[i], list[j] = list[j], list[i]
     # end of loop swap list[0] with list[j] and vice versa
     list[0], list[j] = list[j], list[0]
-    # print the current order of the list + the current pivot position
-    return f"The list is {list}, with pivot {j}"
+    # the current pivot position
+    return j
 
-print(partition_algo(unordered_list))
+pivot_position = partition_algo(unordered_list)
+
+print(unordered_list)
+print(pivot_position)
